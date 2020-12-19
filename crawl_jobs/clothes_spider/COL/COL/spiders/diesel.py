@@ -26,6 +26,8 @@ class DieselItem(scrapy.Item):
     disc = scrapy.Field()  # Descuento
     url = scrapy.Field()  # URL del producto
     color_sku = scrapy.Field()  # Colores y tallas por color
+    description = scrapy.Field()  # Descripción del producto
+    reference = scrapy.Field()  # Referencia (business key)
 
 
 class DieselSpider(scrapy.Spider):
@@ -60,11 +62,13 @@ class DieselSpider(scrapy.Spider):
         wait = WebDriverWait(driver, 10)
         wait.until(EC.presence_of_element_located(
             (By.XPATH, "//div[contains(@id, 'ResultItems_')]")))
-        self.scroll(driver, 2)
+        self.scroll(driver, 3)
         rootSelector = Selector(text=driver.page_source)
         logger.info(f"Root Selector: {rootSelector}")
+        clothes = rootSelector.xpath(
+            "//div[contains(@id, 'ResultItems_')]/div/ul/li/span")
 
-        for sel in rootSelector.xpath("//div[contains(@id, 'ResultItems_')]/div/ul/li/span"):
+        for sel in clothes:
             logger.info(f"Seleccionando un nuevo item para Diesel")
             item = DieselItem()
             item['product_name'] = sel.xpath(
@@ -87,12 +91,12 @@ class DieselSpider(scrapy.Spider):
 
             # Abrir cada item para obtener el color y el SKU (tallas)
             driver.find_element_by_tag_name(
-                'body').send_keys(Keys.COMMAND + 't')
+                'body').send_keys(Keys.CONTROL + 't')
             driver.get(item['url'])
 
             # Esperar que cargue el color y las tallas
             WebDriverWait(driver, 10).until(EC.presence_of_element_located(
-                (By.XPATH, "//span[@class='group_0' and @class='group_1'] ")))
+                (By.XPATH, "//span[@class='group_0']")))
 
             # Encontrar los colores que no sean unavailable
             colors = driver.find_elements(
@@ -101,8 +105,12 @@ class DieselSpider(scrapy.Spider):
             item['color_sku'] = []
             for color_item in colors:
                 driver.execute_script("arguments[0].click();", color_item)
-                time.sleep(2)
+                time.sleep(3)
                 itemSelector = Selector(text=driver.page_source)
+                item['description'] = itemSelector.xpath(
+                    "//div[@class='productDescription']/text()").extract()[0]
+                item['reference'] = itemSelector.xpath(
+                    "//div[contains(@class,'productReference')]/text()").extract()[0]
                 # Encontrar los tamaños para el color seleccionado
                 sizes = itemSelector.xpath(
                     "//span[@class='group_1']/input[not(contains(@class,'item_unavaliable')) and not(contains(@class, 'item_doesnt_exist')) and not(contains(@class, 'combination_unavaliable'))]/@data-value").extract()
@@ -114,6 +122,6 @@ class DieselSpider(scrapy.Spider):
 
             logger.info("OK")
             driver.find_element_by_tag_name(
-                'body').send_keys(Keys.COMMAND + 'w')
+                'body').send_keys(Keys.CONTROL + 'w')
 
             yield item
