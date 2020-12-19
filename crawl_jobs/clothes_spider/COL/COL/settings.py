@@ -1,4 +1,4 @@
-# Scrapy settings for CO_clothes_spider project
+# Scrapy settings for COL project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,14 +7,14 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'CO_clothes_spider'
+BOT_NAME = 'COL'
 
-SPIDER_MODULES = ['CO_clothes_spider.spiders']
-NEWSPIDER_MODULE = 'CO_clothes_spider.spiders'
+SPIDER_MODULES = ['COL.spiders']
+NEWSPIDER_MODULE = 'COL.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'CO_clothes_spider (+http://www.yourdomain.com)'
+#USER_AGENT = 'COL (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -45,13 +45,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'CO_clothes_spider.middlewares.CoClothesSpiderSpiderMiddleware': 543,
+#    'COL.middlewares.ColSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'CO_clothes_spider.middlewares.CoClothesSpiderDownloaderMiddleware': 543,
+#    'COL.middlewares.ColDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -63,7 +63,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'CO_clothes_spider.pipelines.CoClothesSpiderPipeline': 300,
+#    'COL.pipelines.ColPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
