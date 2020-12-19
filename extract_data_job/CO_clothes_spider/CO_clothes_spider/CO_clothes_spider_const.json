@@ -1,0 +1,46 @@
+{
+    "webdriverPath": "C:/Depayser/Best Deal Project/_static/drivers/chromedriver.exe",
+    "stores": [
+        {
+            "diesel": {
+                "url": "co.diesel.com",
+                "sale": {
+                    "men": [
+                        {
+                            "general": {
+                                "url": "https://co.diesel.com/sale/hombre",
+                                "lazyLoading": true
+                            }
+                        }
+                    ],
+                    "women": [
+                        {
+                            "general": {
+                                "url": "https://co.diesel.com/sale/mujer",
+                                "lazyLoading": true
+                            }
+                        }
+                    ]
+                },
+                "clothes": {
+                    "men": [
+                        {
+                            "tshirt": {
+                                "url": "https://co.diesel.com/Hombre/Denim-y-Ropa/Ropa/Camisetas",
+                                "lazyLoading": true
+                            }
+                        }
+                    ],
+                    "women": [
+                        {
+                            "tshirt": {
+                                "url": "https://co.diesel.com/Mujer/Denim-y-Ropa/Ropa/Camisetas",
+                                "lazyLoading": true
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
