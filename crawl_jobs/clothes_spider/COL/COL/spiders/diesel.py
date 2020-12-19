@@ -26,8 +26,8 @@ class DieselItem(scrapy.Item):
     disc = scrapy.Field()  # Descuento
     url = scrapy.Field()  # URL del producto
     color_sku = scrapy.Field()  # Colores y tallas por color
-    description = scrapy.Field() # Descripción del producto
-    reference = scrapy.Field() # Referencia (business key)
+    description = scrapy.Field()  # Descripción del producto
+    reference = scrapy.Field()  # Referencia (business key)
 
 
 class DieselSpider(scrapy.Spider):
@@ -107,8 +107,10 @@ class DieselSpider(scrapy.Spider):
                 driver.execute_script("arguments[0].click();", color_item)
                 time.sleep(3)
                 itemSelector = Selector(text=driver.page_source)
-                item['description'] = itemSelector.xpath("//div[@class='productDescription']/text()").extract()[0]
-                item['reference'] = itemSelector.xpath("//div[contains(@class,'productReference')]/text()").extract()[0]
+                item['description'] = itemSelector.xpath(
+                    "//div[@class='productDescription']/text()").extract()[0]
+                item['reference'] = itemSelector.xpath(
+                    "//div[contains(@class,'productReference')]/text()").extract()[0]
                 # Encontrar los tamaños para el color seleccionado
                 sizes = itemSelector.xpath(
                     "//span[@class='group_1']/input[not(contains(@class,'item_unavaliable')) and not(contains(@class, 'item_doesnt_exist')) and not(contains(@class, 'combination_unavaliable'))]/@data-value").extract()
