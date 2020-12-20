@@ -95,7 +95,6 @@ class DieselSpider(scrapy.Spider):
                     item['subcategory'] = module['type']
                     item['subcategory_url'] = module['url']
                     driver.get(module['url'])
-                    driver.maximize_window()
                     wait = WebDriverWait(driver, 10)
                     wait.until(EC.presence_of_element_located(
                         (By.XPATH, "//div[contains(@id, 'ResultItems_')]")))
@@ -202,6 +201,8 @@ class DieselSpider(scrapy.Spider):
                                     "color": color_item.get_attribute("value"),
                                     "sizes": sizes
                                 })
+                            else:
+                                logger.info("No se encontró colores y/o tallas")
 
                         logger.info("OK")
                         driver.find_element_by_tag_name(

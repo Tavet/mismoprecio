@@ -15,9 +15,18 @@ NEWSPIDER_MODULE = 'COL.spiders'
 # Aditional arguments
 
 FEED_EXPORT_ENCODING = 'utf-8'
-ITEM_PIPELINES = {'scrapy.pipelines.files.FilesPipeline': 1}
-FILES_STORE = 'C:/Depayser/Best Deal Project/_static'
-FILES_EXPIRES = 3
+
+AWS_ACCESS_KEY_ID = 'AKIARSJCFIURQ42RWPFY'
+AWS_SECRET_ACCESS_KEY = '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'
+
+FEED_URI = 's3://best-deal-stores-info/clothes/data/raw/{file_name}.jsonl'
+S3PIPELINE_URL = FEED_URI
+FEED_FORMAT = 'jsonlines'
+
+ITEM_PIPELINE = {
+'scrapy.pipelines.files.S3FilesStore': 1
+}
+
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
