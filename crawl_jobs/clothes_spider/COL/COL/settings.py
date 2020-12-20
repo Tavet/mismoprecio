@@ -15,6 +15,10 @@ NEWSPIDER_MODULE = 'COL.spiders'
 # Aditional arguments
 
 FEED_EXPORT_ENCODING = 'utf-8'
+ITEM_PIPELINES = {'scrapy.pipelines.files.FilesPipeline': 1}
+FILES_STORE = 'C:/Depayser/Best Deal Project/_static'
+FILES_EXPIRES = 3
+
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'COL (+http://www.yourdomain.com)'
