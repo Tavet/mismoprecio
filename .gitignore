@@ -1,2 +1,2 @@
-*/*.log
 crawl_jobs/clothes_spider/*/data.json
+crawl_jobs/clothes_spider/*/*.log

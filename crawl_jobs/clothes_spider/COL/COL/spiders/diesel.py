@@ -9,6 +9,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
 from logzero import logfile, logger
 
 # Otros
@@ -55,6 +56,7 @@ class DieselSpider(scrapy.Spider):
             last_height = new_height
 
     def parse_clothes(self, response):
+        logger.info(f"Iniciando proceso de recolección para Diesel")
         driver = webdriver.Chrome(
             'C:/Depayser/Best Deal Project/_static/drivers/chromedriver.exe')
         driver.get('https://co.diesel.com/Hombre/Denim-y-Ropa/Ropa')
@@ -64,30 +66,57 @@ class DieselSpider(scrapy.Spider):
             (By.XPATH, "//div[contains(@id, 'ResultItems_')]")))
         self.scroll(driver, 3)
         rootSelector = Selector(text=driver.page_source)
-        logger.info(f"Root Selector: {rootSelector}")
         clothes = rootSelector.xpath(
             "//div[contains(@id, 'ResultItems_')]/div/ul/li/span")
 
         for sel in clothes:
             logger.info(f"Seleccionando un nuevo item para Diesel")
             item = DieselItem()
-            item['product_name'] = sel.xpath(
-                "b[@class='product-name']/a/@title").extract()[0]
 
+            # *** Product name
+            # Skip si no tiene nombre
+            try:
+                item['product_name'] = sel.xpath(
+                    "b[@class='product-name']/a/@title").extract()[0]
+            except IndexError as error:
+                logger.error(f"Error fetching name: {error}")
+                continue
+
+            logger.info(f"Producto {item['product_name']}")
+
+            # *** Price
+            # Skip si no tiene precio
             try:
                 item['best_price'] = sel.xpath(
                     "span[@class='price']/a/span[@class='best-price']/text()").extract()[0]
             except IndexError:
-                item['old_price'] = sel.xpath(
-                    "span[@class='price']/a/span[@class='old-price']/text()").extract()[0]
-                item['best_price'] = sel.xpath(
-                    "span[@class='price']/a/span[@class='best-price widthC']/text()").extract()[0]
-                item['disc'] = sel.xpath(
-                    "span[@class='price']/span[@class='dtoF']/text()").extract()[0]
+                try:
+                    item['old_price'] = sel.xpath(
+                        "span[@class='price']/a/span[@class='old-price']/text()").extract()[0]
+                    item['best_price'] = sel.xpath(
+                        "span[@class='price']/a/span[@class='best-price widthC']/text()").extract()[0]
+                    item['disc'] = sel.xpath(
+                        "span[@class='price']/span[@class='dtoF']/text()").extract()[0]
+                except IndexError as error:
+                    logger.error(f"Error fetching price: {error}")
+                    continue
 
-            item['image_url'] = sel.xpath(
-                "a[@class='product-image']/img/@src").extract()[0]
-            item['url'] = sel.xpath("a/@href").extract()[0]
+             # *** Image
+             # Skip si no tiene imagen
+            try:
+                item['image_url'] = sel.xpath(
+                    "a[@class='product-image']/img/@src").extract()[0]
+            except IndexError as error:
+                logger.error(f"Error fetching image href: {error}")
+                continue
+
+             # *** URL
+             # Skip si no tiene url
+            try:
+                item['url'] = sel.xpath("a/@href").extract()[0]
+            except IndexError as error:
+                logger.error(f"Error fetching product URL: {error}")
+                continue
 
             # Abrir cada item para obtener el color y el SKU (tallas)
             driver.find_element_by_tag_name(
@@ -95,8 +124,13 @@ class DieselSpider(scrapy.Spider):
             driver.get(item['url'])
 
             # Esperar que cargue el color y las tallas
-            WebDriverWait(driver, 10).until(EC.presence_of_element_located(
-                (By.XPATH, "//span[@class='group_0']")))
+            # Skip el producto si no tiene esta información
+            try:
+                WebDriverWait(driver, 10).until(EC.presence_of_element_located(
+                    (By.XPATH, "//span[@class='group_0']")))
+            except TimeoutException as error:
+                logger.error(f"Error waiting for colors and SKU list: {error}")
+                continue
 
             # Encontrar los colores que no sean unavailable
             colors = driver.find_elements(
@@ -107,10 +141,21 @@ class DieselSpider(scrapy.Spider):
                 driver.execute_script("arguments[0].click();", color_item)
                 time.sleep(3)
                 itemSelector = Selector(text=driver.page_source)
-                item['description'] = itemSelector.xpath(
-                    "//div[@class='productDescription']/text()").extract()[0]
-                item['reference'] = itemSelector.xpath(
-                    "//div[contains(@class,'productReference')]/text()").extract()[0]
+
+                # *** Description
+                try:
+                    item['description'] = itemSelector.xpath(
+                        "//div[@class='productDescription']/text()").extract()[0]
+                except IndexError as error:
+                    logger.error(f"Error fetching description: {error}")
+
+                # *** Reference
+                try:
+                    item['reference'] = itemSelector.xpath(
+                        "//div[contains(@class,'productReference')]/text()").extract()[0]
+                except IndexError as error:
+                    logger.error(f"Error fetching reference: {error}")
+
                 # Encontrar los tamaños para el color seleccionado
                 sizes = itemSelector.xpath(
                     "//span[@class='group_1']/input[not(contains(@class,'item_unavaliable')) and not(contains(@class, 'item_doesnt_exist')) and not(contains(@class, 'combination_unavaliable'))]/@data-value").extract()
