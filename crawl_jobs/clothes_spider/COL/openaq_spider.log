@@ -134,3 +134,106 @@
 [I 201220 15:06:57 diesel:74] Iniciando proceso de recolección para Diesel
 [I 201220 15:06:57 diesel:75] Yeah 2
 [I 201220 15:06:59 diesel:80] Yeah 3
+[I 201220 15:16:45 diesel:77] Iniciando proceso de recolección para Diesel
+[I 201220 15:16:45 diesel:78] Yeah 2
+[I 201220 15:16:47 diesel:81] Recorriendo el género All
+[I 201220 15:16:47 diesel:83] Recorriendo la categoría Watches
+[I 201220 15:16:47 diesel:85] Recorriendo el módulo All
+[I 201220 15:16:47 diesel:86] URL https://co.diesel.com/Reloj
+[I 201220 15:16:47 diesel:81] Recorriendo el género Women
+[I 201220 15:16:47 diesel:83] Recorriendo la categoría Clothes
+[I 201220 15:16:47 diesel:85] Recorriendo el módulo T-Shirt
+[I 201220 15:16:47 diesel:86] URL https://co.diesel.com/Mujer/Denim-y-Ropa/Ropa/Camisetas
+[I 201220 15:16:47 diesel:85] Recorriendo el módulo Jumpsuit
+[I 201220 15:16:47 diesel:86] URL https://co.diesel.com/Mujer/Denim-y-Ropa/Ropa/Jumpsuits
+[I 201220 15:16:47 diesel:85] Recorriendo el módulo Shirt
+[I 201220 15:16:47 diesel:86] URL https://co.diesel.com/Mujer/Denim-y-Ropa/Ropa/Camisas
+[I 201220 15:16:47 diesel:85] Recorriendo el módulo Sweater
+[I 201220 15:16:47 diesel:86] URL https://co.diesel.com/Mujer/Denim-y-Ropa/Ropa/Sweaters
+[I 201220 15:16:47 diesel:85] Recorriendo el módulo Jacket
+[I 201220 15:16:47 diesel:86] URL https://co.diesel.com/Mujer/Denim-y-Ropa/Ropa/Chaquetas
+[I 201220 15:16:47 diesel:85] Recorriendo el módulo Pant
+[I 201220 15:16:47 diesel:86] URL https://co.diesel.com/Mujer/Denim-y-Ropa/Ropa/Pantalones
+[I 201220 15:16:47 diesel:85] Recorriendo el módulo Underwear
+[I 201220 15:16:47 diesel:86] URL https://co.diesel.com/Mujer/Denim-y-Ropa/Ropa/Underwear
+[I 201220 15:16:47 diesel:85] Recorriendo el módulo Skirt
+[I 201220 15:16:47 diesel:86] URL https://co.diesel.com/Mujer/Denim-y-Ropa/Ropa/Faldas
+[I 201220 15:16:47 diesel:85] Recorriendo el módulo Dress
+[I 201220 15:16:47 diesel:86] URL https://co.diesel.com/Mujer/Denim-y-Ropa/Ropa/Vestidos
+[I 201220 15:16:47 diesel:85] Recorriendo el módulo Short
+[I 201220 15:16:47 diesel:86] URL https://co.diesel.com/Mujer/Denim-y-Ropa/Ropa/Shorts
+[I 201220 15:16:47 diesel:83] Recorriendo la categoría Accessories
+[I 201220 15:16:47 diesel:85] Recorriendo el módulo Bag
+[I 201220 15:16:47 diesel:86] URL https://co.diesel.com/Mujer/Zapatos-y-Accesorios/Bolso
+[I 201220 15:16:47 diesel:85] Recorriendo el módulo Belt
+[I 201220 15:16:47 diesel:86] URL https://co.diesel.com/Mujer/Zapatos-y-Accesorios/Cinturones
+[I 201220 15:16:47 diesel:83] Recorriendo la categoría Shoes
+[I 201220 15:16:47 diesel:85] Recorriendo el módulo All
+[I 201220 15:16:47 diesel:86] URL https://co.diesel.com/Mujer/Zapatos/Zapatos
+[I 201220 15:16:47 diesel:81] Recorriendo el género Men
+[I 201220 15:16:47 diesel:83] Recorriendo la categoría Shoes
+[I 201220 15:16:47 diesel:85] Recorriendo el módulo All
+[I 201220 15:16:47 diesel:86] URL https://co.diesel.com/Hombre/Zapatos/Zapatos
+[I 201220 15:16:47 diesel:83] Recorriendo la categoría Accessories
+[I 201220 15:16:47 diesel:85] Recorriendo el módulo Handbag
+[I 201220 15:16:47 diesel:86] URL https://co.diesel.com/hombre/zapatos-y-accesorios/bolsos
+[I 201220 15:16:47 diesel:85] Recorriendo el módulo Wallet
+[I 201220 15:16:47 diesel:86] URL https://co.diesel.com/Hombre/Zapatos-y-Accesorios/Billeteras
+[I 201220 15:16:47 diesel:85] Recorriendo el módulo Belt
+[I 201220 15:16:47 diesel:86] URL https://co.diesel.com/Hombre/Zapatos-y-Accesorios/Cinturones
+[I 201220 15:16:47 diesel:85] Recorriendo el módulo Fragance
+[I 201220 15:16:47 diesel:86] URL https://co.diesel.com/Hombre/Zapatos-y-Accesorios/Fragancias
+[I 201220 15:16:47 diesel:85] Recorriendo el módulo Hat
+[I 201220 15:16:47 diesel:86] URL https://co.diesel.com/Hombre/gorro
+[I 201220 15:16:47 diesel:83] Recorriendo la categoría Clothes
+[I 201220 15:16:47 diesel:85] Recorriendo el módulo T-Shirt
+[I 201220 15:16:47 diesel:86] URL https://co.diesel.com/Hombre/Denim-y-Ropa/Ropa/Camisetas
+[I 201220 15:16:47 diesel:85] Recorriendo el módulo Polo
+[I 201220 15:16:47 diesel:86] URL https://co.diesel.com/Hombre/Denim-y-Ropa/Ropa/Polos
+[I 201220 15:16:47 diesel:85] Recorriendo el módulo Shirt
+[I 201220 15:16:47 diesel:86] URL https://co.diesel.com/Hombre/Denim-y-Ropa/Ropa/Camisas
+[I 201220 15:16:47 diesel:85] Recorriendo el módulo Sweater
+[I 201220 15:16:47 diesel:86] URL https://co.diesel.com/Hombre/Denim-y-Ropa/Ropa/Sweaters
+[I 201220 15:16:47 diesel:85] Recorriendo el módulo Jacket
+[I 201220 15:16:47 diesel:86] URL https://co.diesel.com/Hombre/Denim-y-Ropa/Ropa/Chaquetas
+[I 201220 15:16:47 diesel:85] Recorriendo el módulo Pant
+[I 201220 15:16:47 diesel:86] URL https://co.diesel.com/Hombre/Denim-y-Ropa/Denim
+[I 201220 15:16:47 diesel:85] Recorriendo el módulo Underwear
+[I 201220 15:16:47 diesel:86] URL https://co.diesel.com/Hombre/Denim-y-Ropa/Ropa/Underwear
+[I 201220 15:16:47 diesel:85] Recorriendo el módulo Beach
+[I 201220 15:16:47 diesel:86] URL https://co.diesel.com/Hombre/Denim-y-Ropa/Ropa/beach-ware
+[I 201220 15:16:47 diesel:89] Yeah 3
+[I 201220 15:21:51 diesel:79] Iniciando proceso de recolección para Diesel
+[I 201220 15:21:57 diesel:86] Recorriendo el género All
+[I 201220 15:21:57 diesel:89] Recorriendo la categoría Watches
+[I 201220 15:21:57 diesel:92] Recorriendo el módulo All
+[I 201220 15:21:57 diesel:93] URL https://co.diesel.com/Reloj
+[I 201220 15:22:11 diesel:107] Seleccionando un nuevo item para Diesel
+[I 201220 15:22:11 diesel:117] Producto Reloj  Para Hombre Mr. Daddy 2.0
+[I 201220 15:22:18 diesel:205] OK
+[I 201220 15:22:19 diesel:107] Seleccionando un nuevo item para Diesel
+[I 201220 15:22:19 diesel:117] Producto Reloj  Para Hombre Ms9
+[I 201220 15:22:53 diesel:205] OK
+[I 201220 15:22:53 diesel:107] Seleccionando un nuevo item para Diesel
+[I 201220 15:22:53 diesel:117] Producto Reloj  Para Hombre Crusher
+[I 201220 15:23:27 diesel:205] OK
+[I 201220 15:23:27 diesel:107] Seleccionando un nuevo item para Diesel
+[I 201220 15:23:27 diesel:117] Producto Reloj  Para Hombre Mega Chief
+[I 201220 15:23:34 diesel:205] OK
+[I 201220 15:23:34 diesel:107] Seleccionando un nuevo item para Diesel
+[I 201220 15:23:34 diesel:117] Producto Reloj  Para Hombre Mega Chief
+[I 201220 15:23:40 diesel:205] OK
+[I 201220 15:23:40 diesel:107] Seleccionando un nuevo item para Diesel
+[I 201220 15:23:40 diesel:117] Producto Reloj Para Hombre D-48 Diesel
+[I 201220 15:23:47 diesel:205] OK
+[I 201220 15:23:47 diesel:107] Seleccionando un nuevo item para Diesel
+[I 201220 15:23:47 diesel:117] Producto Reloj Para Mujer  Chopped Diesel
+[I 201220 15:23:52 diesel:205] OK
+[I 201220 15:23:52 diesel:107] Seleccionando un nuevo item para Diesel
+[I 201220 15:23:52 diesel:117] Producto Reloj MEGACHIEF Hombre
+[I 201220 15:23:59 diesel:205] OK
+[I 201220 15:23:59 diesel:107] Seleccionando un nuevo item para Diesel
+[I 201220 15:23:59 diesel:117] Producto Reloj STIGG Hombre
+[I 201220 15:24:11 diesel:205] OK
+[I 201220 15:24:11 diesel:107] Seleccionando un nuevo item para Diesel
+[I 201220 15:24:11 diesel:117] Producto Reloj  Para Hombre Crusher
