@@ -5,162 +5,162 @@
         "url": "https://co.diesel.com/",
         "content": [
             {
-                "genre": "All",
+                "genre": "all",
                 "content": [
                     {
-                        "category": "Watches",
+                        "category": "watches",
                         "modules": [
                             {
-                                "type": "All",
-                                "url": "https://co.diesel.com/Reloj"
+                                "type": "all",
+                                "url": "https://co.diesel.com/reloj"
                             }
                         ]
                     }
                 ]
             },
             {
-                "genre": "Women",
+                "genre": "women",
                 "content": [
                     {
-                        "category": "Clothes",
+                        "category": "clothes",
                         "modules": [
                             {
-                                "type": "T-Shirt",
-                                "url": "https://co.diesel.com/Mujer/Denim-y-Ropa/Ropa/Camisetas"
+                                "type": "t-shirt",
+                                "url": "https://co.diesel.com/mujer/denim-y-ropa/ropa/camisetas"
                             },
                             {
-                                "type": "Jumpsuit",
-                                "url": "https://co.diesel.com/Mujer/Denim-y-Ropa/Ropa/Jumpsuits"
+                                "type": "jumpsuit",
+                                "url": "https://co.diesel.com/mujer/denim-y-ropa/ropa/jumpsuits"
                             },
                             {
-                                "type": "Shirt",
-                                "url": "https://co.diesel.com/Mujer/Denim-y-Ropa/Ropa/Camisas"
+                                "type": "shirt",
+                                "url": "https://co.diesel.com/mujer/denim-y-ropa/ropa/camisas"
                             },
                             {
-                                "type": "Sweater",
-                                "url": "https://co.diesel.com/Mujer/Denim-y-Ropa/Ropa/Sweaters"
+                                "type": "sweater",
+                                "url": "https://co.diesel.com/mujer/denim-y-ropa/ropa/sweaters"
                             },
                             {
-                                "type": "Jacket",
-                                "url": "https://co.diesel.com/Mujer/Denim-y-Ropa/Ropa/Chaquetas"
+                                "type": "jacket",
+                                "url": "https://co.diesel.com/mujer/denim-y-ropa/ropa/chaquetas"
                             },
                             {
-                                "type": "Pant",
-                                "url": "https://co.diesel.com/Mujer/Denim-y-Ropa/Ropa/Pantalones"
+                                "type": "pant",
+                                "url": "https://co.diesel.com/mujer/denim-y-ropa/ropa/pantalones"
                             },
                             {
-                                "type": "Underwear",
-                                "url": "https://co.diesel.com/Mujer/Denim-y-Ropa/Ropa/Underwear"
+                                "type": "underwear",
+                                "url": "https://co.diesel.com/mujer/denim-y-ropa/ropa/underwear"
                             },
                             {
-                                "type": "Skirt",
-                                "url": "https://co.diesel.com/Mujer/Denim-y-Ropa/Ropa/Faldas"
+                                "type": "skirt",
+                                "url": "https://co.diesel.com/mujer/denim-y-ropa/ropa/faldas"
                             },
                             {
-                                "type": "Dress",
-                                "url": "https://co.diesel.com/Mujer/Denim-y-Ropa/Ropa/Vestidos"
+                                "type": "dress",
+                                "url": "https://co.diesel.com/mujer/denim-y-ropa/ropa/vestidos"
                             },
                             {
-                                "type": "Short",
-                                "url": "https://co.diesel.com/Mujer/Denim-y-Ropa/Ropa/Shorts"
+                                "type": "short",
+                                "url": "https://co.diesel.com/mujer/denim-y-ropa/ropa/shorts"
                             }
                         ]
                     },
                     {
-                        "category": "Accessories",
+                        "category": "accessories",
                         "modules": [
                             {
-                                "type": "Bag",
-                                "url": "https://co.diesel.com/Mujer/Zapatos-y-Accesorios/Bolso"
+                                "type": "bag",
+                                "url": "https://co.diesel.com/mujer/zapatos-y-accesorios/bolso"
                             },
                             {
-                                "type": "Belt",
-                                "url": "https://co.diesel.com/Mujer/Zapatos-y-Accesorios/Cinturones"
+                                "type": "belt",
+                                "url": "https://co.diesel.com/mujer/zapatos-y-accesorios/cinturones"
                             }
                         ]
                     },
                     {
-                        "category": "Shoes",
+                        "category": "shoes",
                         "modules": [
                             {
-                                "type": "All",
-                                "url": "https://co.diesel.com/Mujer/Zapatos/Zapatos"
+                                "type": "all",
+                                "url": "https://co.diesel.com/mujer/zapatos/zapatos"
                             }
                         ]
                     }
                 ]
             },
             {
-                "genre": "Men",
+                "genre": "men",
                 "content": [
                     {
-                        "category": "Shoes",
+                        "category": "shoes",
                         "modules": [
                             {
-                                "type": "All",
-                                "url": "https://co.diesel.com/Hombre/Zapatos/Zapatos"
+                                "type": "all",
+                                "url": "https://co.diesel.com/hombre/zapatos/zapatos"
                             }
                         ]
                     },
                     {
-                        "category": "Accessories",
+                        "category": "accessories",
                         "modules": [
                             {
-                                "type": "Handbag",
+                                "type": "handbag",
                                 "url": "https://co.diesel.com/hombre/zapatos-y-accesorios/bolsos"
                             },
                             {
-                                "type": "Wallet",
-                                "url": "https://co.diesel.com/Hombre/Zapatos-y-Accesorios/Billeteras"
+                                "type": "wallet",
+                                "url": "https://co.diesel.com/hombre/zapatos-y-accesorios/billeteras"
                             },
                             {
-                                "type": "Belt",
-                                "url": "https://co.diesel.com/Hombre/Zapatos-y-Accesorios/Cinturones"
+                                "type": "belt",
+                                "url": "https://co.diesel.com/hombre/zapatos-y-accesorios/cinturones"
                             },
                             {
-                                "type": "Fragance",
-                                "url": "https://co.diesel.com/Hombre/Zapatos-y-Accesorios/Fragancias"
+                                "type": "fragance",
+                                "url": "https://co.diesel.com/hombre/zapatos-y-accesorios/fragancias"
                             },
                             {
-                                "type": "Hat",
-                                "url": "https://co.diesel.com/Hombre/gorro"
+                                "type": "hat",
+                                "url": "https://co.diesel.com/hombre/gorro"
                             }
                         ]
                     },
                     {
-                        "category": "Clothes",
+                        "category": "clothes",
                         "modules": [
                             {
-                                "type": "T-Shirt",
-                                "url": "https://co.diesel.com/Hombre/Denim-y-Ropa/Ropa/Camisetas"
+                                "type": "t-shirt",
+                                "url": "https://co.diesel.com/hombre/denim-y-ropa/ropa/camisetas"
                             },
                             {
-                                "type": "Polo",
-                                "url": "https://co.diesel.com/Hombre/Denim-y-Ropa/Ropa/Polos"
+                                "type": "polo",
+                                "url": "https://co.diesel.com/hombre/denim-y-ropa/ropa/polos"
                             },
                             {
-                                "type": "Shirt",
-                                "url": "https://co.diesel.com/Hombre/Denim-y-Ropa/Ropa/Camisas"
+                                "type": "shirt",
+                                "url": "https://co.diesel.com/hombre/denim-y-ropa/ropa/camisas"
                             },
                             {
-                                "type": "Sweater",
-                                "url": "https://co.diesel.com/Hombre/Denim-y-Ropa/Ropa/Sweaters"
+                                "type": "sweater",
+                                "url": "https://co.diesel.com/hombre/denim-y-ropa/ropa/sweaters"
                             },
                             {
-                                "type": "Jacket",
-                                "url": "https://co.diesel.com/Hombre/Denim-y-Ropa/Ropa/Chaquetas"
+                                "type": "jacket",
+                                "url": "https://co.diesel.com/hombre/denim-y-ropa/ropa/chaquetas"
                             },
                             {
-                                "type": "Pant",
-                                "url": "https://co.diesel.com/Hombre/Denim-y-Ropa/Denim"
+                                "type": "pant",
+                                "url": "https://co.diesel.com/hombre/denim-y-ropa/denim"
                             },
                             {
-                                "type": "Underwear",
-                                "url": "https://co.diesel.com/Hombre/Denim-y-Ropa/Ropa/Underwear"
+                                "type": "underwear",
+                                "url": "https://co.diesel.com/hombre/denim-y-ropa/ropa/underwear"
                             },
                             {
-                                "type": "Beach",
-                                "url": "https://co.diesel.com/Hombre/Denim-y-Ropa/Ropa/beach-ware"
+                                "type": "beach",
+                                "url": "https://co.diesel.com/hombre/denim-y-ropa/ropa/beach-ware"
                             }
                         ]
                     }

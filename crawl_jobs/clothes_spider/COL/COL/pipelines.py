@@ -6,8 +6,36 @@
 
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
+from scrapy.pipelines.images import ImagesPipeline
+from scrapy.exceptions import DropItem
+from scrapy import Request
 
 
 class ColPipeline:
     def process_item(self, item, spider):
         return item
+
+
+class CustomImagesPipeline(ImagesPipeline):
+    def file_path(self, request, response=None, info=None):
+        # Attention pay attention! ! ! , there is a pit here, you can no longer use request.meta['item']
+        item = request.meta.get('item')
+        index = request.meta.get('index')
+        # print(request.url)
+        # print(index)
+        image_name = item['subcategory'] + '-' + str(index) + '-' + (item['product_name']).replace(
+            " ", "-")  + '.' + request.url.split('/')[-1].split('.')[-1]
+        print(f"Image Name: {image_name}")
+        file_name = "{0}/{1}".format(item['store'], image_name)
+
+        return file_name
+
+    # def item_completed(self, results, item, info):
+    #     image_paths = [x['path'] for ok, x in results if ok]
+    #     if not image_paths:
+    #         Raise DropItem('The picture is not downloaded well')
+    #     return item
+
+    def get_media_requests(self, item, info):
+        for image_url in item['image_urls']:
+            yield Request(image_url, meta={'item': item, 'index': item['image_urls'].index(image_url)})
