@@ -16,6 +16,7 @@ from selenium.webdriver.support import expected_conditions as EC
 # Otros
 import time
 import json
+import uuid
 import boto3
 from PIL import Image
 from logzero import logfile, logger
@@ -25,6 +26,7 @@ price_pattern = r'\d{1,3}(?:[.,]\d{3})*(?:[.,]\d{2})'
 store_name = 'diesel'
 
 class DieselItem(scrapy.Item):
+    uuid = scrapy.Field()
     product_name = scrapy.Field()  # Nombre del producto
     image_urls = scrapy.Field()
     images = scrapy.Field()
@@ -112,7 +114,9 @@ class DieselSpider(scrapy.Spider):
                         "//div[contains(@id, 'ResultItems_')]/div/ul/li/span")
 
                     for sel in clothes:
+                        item['uuid'] = uuid.uuid4().hex
                         logger.info(f"Seleccionando un nuevo item para Diesel")
+                        logger.info(f"Creando nuevo UUID {item['uuid']}")
                         # *** Product name
                         # Skip si no tiene nombre
                         try:

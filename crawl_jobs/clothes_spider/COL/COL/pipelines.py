@@ -9,6 +9,7 @@ from itemadapter import ItemAdapter
 from scrapy.pipelines.images import ImagesPipeline
 from scrapy.exceptions import DropItem
 from scrapy import Request
+import re
 
 
 class ColPipeline:
@@ -20,14 +21,10 @@ class CustomImagesPipeline(ImagesPipeline):
     def file_path(self, request, response=None, info=None):
         # Attention pay attention! ! ! , there is a pit here, you can no longer use request.meta['item']
         item = request.meta.get('item')
-        index = request.meta.get('index')
-        # print(request.url)
-        # print(index)
-        image_name = item['subcategory'] + '-' + str(index) + '-' + (item['product_name']).replace(
-            " ", "-")  + '.' + request.url.split('/')[-1].split('.')[-1]
-        print(f"Image Name: {image_name}")
+        image_name = item['uuid'] + '.' + (re.search(
+            "/(.*).(jpg|png|gif|jpeg|tif|tiff|bmp)/i", request.url).group(0)).split('/')[-1].split('.')[-1]
         file_name = "{0}/{1}".format(item['store'], image_name)
-
+        print(f"Image Name: {image_name}")
         return file_name
 
     # def item_completed(self, results, item, info):
