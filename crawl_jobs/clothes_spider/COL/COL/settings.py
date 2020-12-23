@@ -18,17 +18,16 @@ NEWSPIDER_MODULE = 'COL.spiders'
 AWS_ACCESS_KEY_ID = 'AKIARSJCFIURQ42RWPFY'
 AWS_SECRET_ACCESS_KEY = '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'
 
-# Files
-ITEM_PIPELINES = {'scrapy.pipelines.images.ImagesPipeline': 1}
-
-IMAGES_STORE = 's3://best-deal-stores-info/clothes/images/'
-
-IMAGES_EXPIRES = 7
 
 # Pipelines
-ITEM_PIPELINES = {
-    'COL.pipelines.CustomImagesPipeline': 300,
-}
+# ITEM_PIPELINES = {
+#     'COL.pipelines.CustomImagesPipeline': 300,
+# }
+
+# Files
+
+IMAGES_STORE = 'C:/Depayser/Best Deal Project/_static/crawled_images'
+IMAGES_EXPIRES = 180
 
 # Others
 

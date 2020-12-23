@@ -25,6 +25,7 @@ price_pattern = r'\d{1,3}(?:[.,]\d{3})*(?:[.,]\d{2})'
 
 store_name = 'diesel'
 
+
 class DieselItem(scrapy.Item):
     uuid = scrapy.Field()
     product_name = scrapy.Field()  # Nombre del producto
@@ -227,8 +228,10 @@ class DieselSpider(scrapy.Spider):
                                 logger.info(
                                     "No se encontró colores y/o tallas")
 
-                        logger.info("OK")
+                        if len(item['color_sku']) <= 0:
+                            item['color_sku'] = None
+
                         driver.find_element_by_tag_name(
                             'body').send_keys(Keys.CONTROL + 'w')
-
+                        logger.info("OK")
                         yield item

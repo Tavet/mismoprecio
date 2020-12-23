@@ -1,2 +1,4 @@
 crawl_jobs/clothes_spider/*/*.json
 crawl_jobs/clothes_spider/*/*.log
+tests.py
+_static/crawled_images/*

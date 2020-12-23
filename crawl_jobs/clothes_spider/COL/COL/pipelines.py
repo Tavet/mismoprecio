@@ -19,20 +19,18 @@ class ColPipeline:
 
 class CustomImagesPipeline(ImagesPipeline):
     def file_path(self, request, response=None, info=None):
-        # Attention pay attention! ! ! , there is a pit here, you can no longer use request.meta['item']
         item = request.meta.get('item')
-        image_name = item['uuid'] + '.' + (re.search(
-            "/(.*).(jpg|png|gif|jpeg|tif|tiff|bmp)/i", request.url).group(0)).split('/')[-1].split('.')[-1]
+        image_name = item['uuid'] + '-' + item['reference'] + '.' + (re.search(
+            "(.*).(jpg|png|gif|jpeg|tif|tiff|bmp)", request.url).group(0)).split('/')[-1].split('.')[-1]
         file_name = "{0}/{1}".format(item['store'], image_name)
-        print(f"Image Name: {image_name}")
         return file_name
 
-    # def item_completed(self, results, item, info):
-    #     image_paths = [x['path'] for ok, x in results if ok]
-    #     if not image_paths:
-    #         Raise DropItem('The picture is not downloaded well')
-    #     return item
+    def item_completed(self, results, item, info):
+        image_paths = [x['path'] for ok, x in results if ok]
+        if not image_paths:
+            raise DropItem('The picture is not downloaded well')
+        return item
 
     def get_media_requests(self, item, info):
         for image_url in item['image_urls']:
-            yield Request(image_url, meta={'item': item, 'index': item['image_urls'].index(image_url)})
+            yield Request(image_url, meta={'item': item})
