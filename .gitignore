@@ -15,7 +15,8 @@ data_pipeline/.cache
 data_pipeline/.history
 data_pipeline/.lib/
 data_pipeline/dist/*
-data_pipeline/target/
+data_pipeline/project/target/
+data_pipeline/project/project/
 data_pipeline/lib_managed/  
 data_pipeline/src_managed/
 data_pipeline/project/boot/
