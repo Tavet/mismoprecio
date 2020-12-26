@@ -1,3 +1,0 @@
-crawl_jobs/clothes_spider/*/*.json
-crawl_jobs/clothes_spider/*/*.log
-_static/crawled_images/*
