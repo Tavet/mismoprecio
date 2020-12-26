@@ -15,10 +15,6 @@ NEWSPIDER_MODULE = 'COL.spiders'
 # ---------------------------------------------
 # Aditional arguments
 
-# Credentials
-# AWS_ACCESS_KEY_ID = 'AKIARSJCFIURQ42RWPFY'
-# AWS_SECRET_ACCESS_KEY = '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'
-
 # Pipelines
 # ITEM_PIPELINES = {'scrapy.pipelines.images.ImagesPipeline': 1}
 # ITEM_PIPELINE = { 'scrapy.pipelines.files.S3FilesStore': 1 }
