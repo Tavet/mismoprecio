@@ -1,0 +1,22 @@
+crawl_jobs/clothes_spider/*/*.json
+_static/crawled_images/*
+
+# General
+*.log
+
+# Frontend
+portal_web/node_modules/
+portal_web/.cache/
+portal_web/public
+
+# Data Pipeline
+data_pipeline/*.class
+data_pipeline/.cache
+data_pipeline/.history
+data_pipeline/.lib/
+data_pipeline/dist/*
+data_pipeline/target/
+data_pipeline/lib_managed/
+data_pipeline/src_managed/
+data_pipeline/project/boot/
+data_pipeline/null/
