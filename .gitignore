@@ -20,3 +20,5 @@ data_pipeline/lib_managed/
 data_pipeline/src_managed/
 data_pipeline/project/boot/
 data_pipeline/null/
+data_pipeline/.bsp/
+data_pipeline/.idea/
