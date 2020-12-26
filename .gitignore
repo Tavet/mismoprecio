@@ -1,2 +1,26 @@
 crawl_jobs/clothes_spider/*/*.json
-crawl_jobs/clothes_spider/*/*.log
+_static/crawled_images/*
+
+# General
+*.log
+
+# Frontend
+frontend/node_modules/
+frontend/.cache/
+frontend/public
+
+# Data Pipeline
+data_pipeline/*.class
+data_pipeline/.cache
+data_pipeline/.history
+data_pipeline/.lib/
+data_pipeline/dist/*
+data_pipeline/project/target/
+data_pipeline/project/project/
+data_pipeline/target/
+data_pipeline/lib_managed/  
+data_pipeline/src_managed/
+data_pipeline/project/boot/
+data_pipeline/null/
+data_pipeline/.bsp/
+data_pipeline/.idea/
