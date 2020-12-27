@@ -5,7 +5,6 @@ import os
 from datetime import timezone, datetime, timedelta
 from dateutil import parser
 
-
 from logzero import logger
 
 BEST_DEAL_STORES_BUCKET = 'best-deal-stores-info'
