@@ -18,7 +18,6 @@ import os
 import sys
 import time
 import uuid
-from PIL import Image
 from logzero import logfile, logger
 
 # Módulos
@@ -50,7 +49,7 @@ class DieselItem(scrapy.Item):
 
 
 class DieselSpider(scrapy.Spider):
-    logfile("openaq_spider.log", maxBytes=1e6, backupCount=3)
+    logfile(store_name + "_spider.log", maxBytes=1e6, backupCount=3, encoding='utf-8')
     name=store_name
     allowed_domains=['co.diesel.com']
 

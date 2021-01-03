@@ -9,20 +9,17 @@ import org.apache.spark
 
 object DataPipelineApplication {
   final val region: Regions = Regions.US_WEST_2
-  final val awsCredentials: BasicAWSCredentials = new BasicAWSCredentials("AKIARSJCFIURQ42RWPFY", "tNDM1YtbyfD8VVHmdMViWcqoJ7KcppPLv/ZNHYNg")
   final val bucketName = "best-deal-stores-info"
   final val path = "clothes/data/raw/clothes-COL-diesel-data.json"
   final val s3Client: AmazonS3 = AmazonS3ClientBuilder.standard()
-    .withCredentials(new AWSStaticCredentialsProvider(awsCredentials))
     .withRegion(region).build()
   final val s3 = s3Client.getObject(bucketName, path)
 
   def main(args: Array[String]): Unit = {
-//    val in = s3.getObjectContent
-//    val reader = new BufferedReader(new InputStreamReader(in))
-//
-//    val data = Stream.continually(reader.read()).takeWhile(_ != -1).map(_.toChar).mkString
-//    print(data)
-    val input = spark.read
+    val in = s3.getObjectContent
+    val reader = new BufferedReader(new InputStreamReader(in))
+
+    val data = Stream.continually(reader.read()).takeWhile(_ != -1).map(_.toChar).mkString
+    print(data)
   }
 }
