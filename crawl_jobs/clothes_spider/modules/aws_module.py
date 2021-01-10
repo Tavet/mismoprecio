@@ -42,8 +42,7 @@ def get_clothes_data(store_name):
         s3.Bucket(BEST_DEAL_STORES_BUCKET).download_file(
             BEST_DEAL_CLOTHES_FILE, local_object)
 
-    data = open(os.path.abspath(os.path.join(os.path.dirname(
-        os.path.abspath(__file__)), "../../../_static/data/clothes.json")))
+    data = open(local_object)
     json_data = json.load(data)
 
     # Filter data with the store passed thorugh the param

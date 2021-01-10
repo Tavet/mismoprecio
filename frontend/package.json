@@ -1,25 +1,23 @@
 {
-  "name": "best-deal",
+  "name": "with-typescript",
   "version": "1.0.0",
-  "private": true,
-  "description": "Best Deal",
-  "author": "Breyner",
-  "keywords": [
-    "gatsby"
-  ],
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "type-check": "tsc"
   },
-  "license": "0BSD",
   "dependencies": {
-    "gatsby": "^2.26.1",
-    "gatsby-plugin-sass": "^2.8.0",
-    "node-sass": "^5.0.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
-  }
+    "next": "latest",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@types/gtag.js": "0.0.4",
+    "@types/node": "^12.12.21",
+    "@types/react": "^16.9.16",
+    "@types/react-dom": "^16.9.4",
+    "typescript": "4.0"
+  },
+  "license": "MIT"
 }
