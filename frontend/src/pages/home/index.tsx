@@ -4,7 +4,7 @@ import { Button } from 'reactstrap';
 
 
 const WithStaticProps = () => (
-    <Layout title="Users List | Next.js + TypeScript Example">
+    <Layout title="Tu sitio favorito de ropa online - Mismoprec.io">
         <h1>HOMEEEEEEEEEEEEEEE List</h1>
         <Button color="danger">Danger!</Button>
         <p>
