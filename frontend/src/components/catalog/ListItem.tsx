@@ -1,14 +1,13 @@
 import React from 'react'
 import Link from 'next/link'
-
-import { User } from '../interfaces/models'
+import { Catalog } from '../../interfaces/models';
 
 type Props = {
-  data: User
+  data: Catalog
 }
 
 const ListItem = ({ data }: Props) => (
-  <Link href="/users/[id]" as={`/users/${data.id}`}>
+  <Link href="/clothes/[id]" as={`/clothes/${data.id}`}>
     <a>
       {data.id}: {data.name}
     </a>
