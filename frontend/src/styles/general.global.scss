@@ -1,8 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,900;1,500;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,900;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import "./colors.global.scss";
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     border: 0;
+}
+
+p {
+    font-family: "Montserrat", sans-serif;
+}
+
+button {
+    border-radius: 30px !important;
+    font-family: "Montserrat", sans-serif;
+}
+
+.btn-primary {
+    background-color: $color-primary !important;
+    border-color: $color-primary !important;
+    padding: .6em 1.5em;
 }

@@ -2,7 +2,6 @@ import React, { ReactNode } from 'react'
 import Head from 'next/head'
 import Footer from './Footer';
 import Nav from './navigation';
-import { Container } from 'reactstrap';
 
 type Props = {
   children?: ReactNode
@@ -19,9 +18,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
     <header>
       <Nav />
     </header>
-    <Container>
-      {children}
-    </Container>
+    {children}
     <Footer />
   </div>
 )

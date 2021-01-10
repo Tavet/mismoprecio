@@ -1,0 +1,24 @@
+@import "./../../styles/colors.global.scss";
+@import "./../../styles/devices.global.scss";
+
+.upper-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-dark;
+    min-height: 515px;
+    color: $color-white;
+
+    h1 {
+        font-family: "Montserrat", sans-serif;
+        color: $color-primary;
+    }
+}
+
+div.row > div {
+    align-self: center;
+}
+
+@include for-size(phone-only) {
+    font-size: 0.2rem !important;
+}
