@@ -1,0 +1,34 @@
+@import "./../../../styles/colors.global.scss";
+
+.navbar-brand {
+    font-family: "Poppins", sans-serif;
+    color: $color-gray !important;
+    font-size: 1.5em !important;
+
+    span {
+        font-weight: 700;
+        color: $color-primary;
+    }
+}
+
+.bg-light {
+    background-color: #fff !important;
+}
+
+a.nav-link {
+    margin-top: 10px;
+    font-family: "Montserrat", sans-serif !important;
+    font-weight: 500 !important;
+    color: $color-gray !important;
+    text-align: center;
+    line-height: 1;
+
+    .soon {
+        &::before {
+            content: "\A";
+            white-space: pre;
+        }
+        color: $color-primary;
+        font-size: 0.7em;
+    }
+}
