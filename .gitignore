@@ -5,28 +5,29 @@ crawl_jobs/crawled_data/*/
 
 # General
 *.log
+.vscode
 
 # Python
  */__pycache__/
 
 # Frontend
-frontend/logs
-frontend/*.log
-frontend/npm-debug.log*
-frontend/pids
-frontend/*.pid
-frontend/*.seed
-frontend/lib-cov
-frontend/coverage
-frontend/.nyc_output
-frontend/.grunt
-frontend/.lock-wscript
-frontend/build/Release
 frontend/node_modules
-frontend/jspm_packages
-frontend/.npm
-frontend/.node_repl_history
-frontend/.next
+frontend/.pnp
+frontend/.pnp.js
+frontend/coverage
+frontend/.next/
+frontend/out/
+frontend/build
+frontend/.DS_Store
+frontend/*.pem
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+frontend/.vercel
 
 # Data Pipeline
 data_pipeline/*.class
