@@ -25,4 +25,4 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__f
 import pages_module
 from aws_module import get_clothes_data
 
-store_name='patprimo'
+store_name='zara'
