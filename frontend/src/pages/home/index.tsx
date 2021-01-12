@@ -1,8 +1,6 @@
-import Link from 'next/link'
 import Layout from '../../components/general/Layout'
 import { Button, Container, Row, Col } from 'reactstrap';
 import './style.scss'
-import Image from 'next/image'
 
 const WithStaticProps = () => (
     <Layout title="Tu sitio favorito de ropa online - Mismoprec.io">
@@ -15,7 +13,7 @@ const WithStaticProps = () => (
                         <Button color="primary">Ver catálogo</Button>
                     </Col>
                     <Col>
-                        <Image src="/img/illustrations/cover-image.svg" width="350" height="350" />
+                        <img src={require('./../../static/images/illustrations/cover-image.svg')} width="350" height="350" />
                     </Col>
                 </Row>
             </Container>

@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Image from 'next/image'
 import {
     Collapse,
     Navbar,
@@ -16,7 +15,7 @@ const Navigation = () => {
     const toggle = () => setIsOpen(!isOpen);
     return (
         <Navbar light expand="md">
-            <NavbarBrand href="/"><Image src="/img/mismoprecio.svg" alt="logo" width="16" height="16" /> Mismo <span>Precio</span></NavbarBrand>
+            <NavbarBrand href="/"><img src={require('./../../../static/images/mismoprecio.svg')} alt="logo" width="16" height="16" /> Mismo <span>Precio</span></NavbarBrand>
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
                 <Nav className="ml-auto" navbar>
