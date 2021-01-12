@@ -10,7 +10,7 @@ const IndexPage = () => (
       <h1>
         Espéranos. ¡Muy pronto!
     </h1>
-      <h3>Llegaremos con muchas novedades para que puedas encontrar tu prenda ideal.</h3>
+      <h3>Llegaremos con muchas novedades para que puedas buscar tu prenda ó outfit ideal al <strong>mismo precio</strong>.</h3>
     </div>
   </div>
 )
