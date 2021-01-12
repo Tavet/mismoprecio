@@ -28,9 +28,6 @@ frontend/.env.development.local
 frontend/.env.test.local
 frontend/.env.production.local
 frontend/.vercel
-frontend/.serverless
-frontend/.serverless_nextjs
-frontend/_warmup
 
 # Data Pipeline
 data_pipeline/*.class
