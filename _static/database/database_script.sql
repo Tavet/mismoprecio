@@ -11,6 +11,7 @@ CREATE TABLE clothes."clothes" (
   "discount" integer,
   "url" varchar NOT NULL,
   "genre" varchar(1),
+  "sold_out" boolean NOT NULL,
   "store_id" bigint NOT NULL,
   "subcategory_id" bigint NOT NULL,
   "created_at" timestamp NOT NULL,
