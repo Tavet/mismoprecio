@@ -1,22 +1,62 @@
-@mixin for-size($size) {
-    @if $size == phone-only {
-        @media (max-width: 599px) {
+@mixin for-exactly-size($size) {
+    @if $size == xs {
+        @media (max-width: 575.98px) {
             @content;
         }
-    } @else if $size == tablet-portrait-up {
-        @media (min-width: 600px) {
+    } @else if $size == sm {
+        @media (min-width: 576px) and (max-width: 767.98px) {
             @content;
         }
-    } @else if $size == tablet-landscape-up {
-        @media (min-width: 900px) {
+    } @else if $size == md {
+        @media (min-width: 768px) and (max-width: 991.98px) {
             @content;
         }
-    } @else if $size == desktop-up {
+    } @else if $size == lg {
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+            @content;
+        }
+    } @else if $size == xl {
         @media (min-width: 1200px) {
             @content;
         }
-    } @else if $size == big-desktop-up {
-        @media (min-width: 1800px) {
+    }
+}
+
+@mixin for-min-size($size) {
+    @if $size == sm {
+        @media (min-width: 576px) {
+            @content;
+        }
+    } @else if $size == md {
+        @media (min-width: 768px) {
+            @content;
+        }
+    } @else if $size == lg {
+        @media (min-width: 992px) {
+            @content;
+        }
+    } @else if $size == xl {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+}
+
+@mixin for-max-size($size) {
+    @if $size == xs {
+        @media (max-width: 575.98px) {
+            @content;
+        }
+    } @else if $size == sm {
+        @media (max-width: 767.98px) {
+            @content;
+        }
+    } @else if $size == md {
+        @media (max-width: 991.98px) {
+            @content;
+        }
+    } @else if $size == lg {
+        @media (max-width: 1199.98px) {
             @content;
         }
     }

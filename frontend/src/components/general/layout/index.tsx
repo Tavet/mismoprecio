@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 import Head from 'next/head'
-import Footer from '../Footer';
+import Footer from '../footer';
 import Nav from '../navigation';
 import './style.scss';
 
@@ -10,7 +10,7 @@ type Props = {
 }
 
 const Layout = ({ children, title = 'This is the default title' }: Props) => (
-  <div className="layout">
+  <div className="mp-layout">
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />

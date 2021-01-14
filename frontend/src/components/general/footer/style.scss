@@ -1,0 +1,31 @@
+@import "./../../../styles/colors.global.scss";
+@import "./../../../styles/devices.global.scss";
+
+.mp-footer {
+    background-image: url("./../../../static/images/backgrounds/mp-footer.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
+    margin-top: 150px;
+
+    @include for-max-size(sm) {
+        padding-top: 200px;
+        background-size: 200%;
+    }
+
+    @include for-min-size(md) {
+        padding-top: 20%;
+    }
+
+    .mp-footer-container {
+        background-color: $color-dark-2;
+        color: $color-white;
+        padding-bottom: 20px;
+        width: 100%;
+        display: flex;
+
+        .logo {
+            filter: grayscale(100%) brightness(200%) contrast(200%);
+        }
+    }
+}
