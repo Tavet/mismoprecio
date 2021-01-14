@@ -3,10 +3,13 @@
 
 .upper-body {
     display: flex;
+    padding: 120px;
     align-items: center;
     justify-content: center;
-    background-color: $color-dark;
-    min-height: 515px;
+    background-image: url('./../../static/images/backgrounds/mp-home-upper.svg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
     color: $color-white;
 
     h1 {

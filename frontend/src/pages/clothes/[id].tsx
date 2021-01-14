@@ -1,6 +1,6 @@
 import { GetStaticProps, GetStaticPaths } from 'next'
 
-import Layout from '../../components/general/Layout'
+import Layout from '../../components/general/layout'
 import ListDetail from '../../components/catalog/ListDetail'
 import { Catalog } from '../../interfaces/models'
 import { sampleCatalogData } from '../../utils/sample-data';
