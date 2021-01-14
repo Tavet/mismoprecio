@@ -2,6 +2,7 @@
 
 # Mismoprecio.com
 ## Colaboradores
+- Pedro Leiva. Co-founder
 - Jeisson Palacio. Co-founder
 - Breyner Rojas. Co-founder
 
