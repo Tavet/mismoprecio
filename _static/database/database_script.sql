@@ -10,9 +10,17 @@ CREATE TABLE clothes."clothes" (
   "old_price" decimal,
   "discount" integer,
   "url" varchar NOT NULL,
-  "image" varchar NOT NULL,
+  "genre" varchar(1),
+  "sold_out" boolean NOT NULL,
   "store_id" bigint NOT NULL,
   "subcategory_id" bigint NOT NULL,
+  "created_at" timestamp NOT NULL,
+  "updated_at" timestamp
+);
+
+CREATE TABLE clothes."images" (
+  "id" bigint PRIMARY KEY,
+  "url" varchar(150),
   "created_at" timestamp NOT NULL,
   "updated_at" timestamp
 );
@@ -59,7 +67,16 @@ CREATE TABLE clothes."clothes_colors_sizes_map" (
   "color_id" bigint,
   "size_id" bigint,
   "created_at" timestamp NOT NULL,
+  "updated_at" timestamp,
   PRIMARY KEY ("clothe_id", "color_id", "size_id")
+);
+
+CREATE TABLE clothes."clothes_images_map" (
+  "clothe_id" bigint,
+  "image_id" bigint,
+  "created_at" timestamp NOT NULL,
+  "updated_at" timestamp,
+  PRIMARY KEY ("clothe_id", "image_id")
 );
 
 CREATE TABLE clothes."countries" (
@@ -83,5 +100,9 @@ ALTER TABLE clothes."clothes_colors_sizes_map" ADD FOREIGN KEY ("size_id") REFER
 ALTER TABLE clothes."clothes_colors_sizes_map" ADD FOREIGN KEY ("color_id") REFERENCES clothes."colors" ("id");
 
 ALTER TABLE clothes."clothes_colors_sizes_map" ADD FOREIGN KEY ("clothe_id") REFERENCES clothes."clothes" ("id");
+
+ALTER TABLE clothes."clothes_images_map" ADD FOREIGN KEY ("clothe_id") REFERENCES clothes."clothes" ("id");
+
+ALTER TABLE clothes."clothes_images_map" ADD FOREIGN KEY ("image_id") REFERENCES clothes."images" ("id");
 
 ALTER TABLE clothes."clothes" ADD FOREIGN KEY ("subcategory_id") REFERENCES clothes."subcategories" ("id");
