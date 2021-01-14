@@ -5,20 +5,6 @@
         "url": "https://co.diesel.com/",
         "content": [
             {
-                "genre": "all",
-                "content": [
-                    {
-                        "category": "watches",
-                        "modules": [
-                            {
-                                "type": "all",
-                                "url": "https://co.diesel.com/reloj"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
                 "genre": "women",
                 "content": [
                     {
@@ -161,6 +147,20 @@
                             {
                                 "type": "beach",
                                 "url": "https://co.diesel.com/hombre/denim-y-ropa/ropa/beach-ware"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "genre": "all",
+                "content": [
+                    {
+                        "category": "watches",
+                        "modules": [
+                            {
+                                "type": "all",
+                                "url": "https://co.diesel.com/reloj"
                             }
                         ]
                     }

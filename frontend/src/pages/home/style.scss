@@ -1,13 +1,25 @@
 @import "./../../styles/colors.global.scss";
 @import "./../../styles/devices.global.scss";
 
-.upper-body {
+.mp-upper-body {
     display: flex;
+    padding: 120px;
     align-items: center;
     justify-content: center;
-    background-color: $color-dark;
-    min-height: 515px;
     color: $color-white;
+
+    @include for-max-size(md) {
+        padding: 40px 30px;
+        background-image: none;
+        background-color: $color-dark-2;
+    }
+
+    @include for-min-size(lg) {
+        background-image: url("./../../static/images/backgrounds/mp-home-upper.svg");
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: 100% auto;
+    }
 
     h1 {
         font-family: "Montserrat", sans-serif;
@@ -19,6 +31,6 @@ div.row > div {
     align-self: center;
 }
 
-@include for-size(phone-only) {
+@include for-exactly-size(xs) {
     font-size: 0.2rem !important;
 }

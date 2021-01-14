@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next'
 import Link from 'next/link'
 
-import Layout from '../../components/general/Layout'
+import Layout from '../../components/general/layout'
 import List from '../../components/catalog/List'
 
 import { Catalog } from '../../interfaces/models'
