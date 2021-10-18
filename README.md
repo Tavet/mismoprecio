@@ -2,9 +2,7 @@
 
 # Mismoprecio.com
 ## Colaboradores
-- Pedro Leiva. Co-founder
-- Jeisson Palacio. Co-founder
-- Breyner Rojas. Co-founder
+- Breyner Rojas. Founder
 
 ## Comandos útiles
 - Docker: https://github.com/AtolonRot/mismoprecio/blob/trunk/_static/commands/Docker%20Commands.MD
